@@ -110,11 +110,12 @@ export const createServer = (config) => {
           )
           const head = Helm.rewind()
           res.status(200).send(`
-            <!DOCTYPE html>
+          <!DOCTYPE html>
             <html lang="en">
               <head>
                 <meta charSet="utf-8">
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge">
+
                 ${head.title.toString()}
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <link rel="shortcut icon" href="/favicon.ico">
@@ -123,6 +124,7 @@ export const createServer = (config) => {
                 <style>
                   html {
                     box-sizing: border-box
+                    width: 100%;
                   }
 
                   *,
@@ -139,12 +141,13 @@ export const createServer = (config) => {
                   }
 
                   body {
+                    max-width: 1024px;
+                    font-family: arial, sans-serif;
                     font-size: 1rem;
+                    margin: 0 auto;
+                    width: 100%;
+                    padding: 0;
                     background-color: #fff;
-                    color: #555;
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;
-                    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
                   }
 
                   h1,h2,h3,h4,h5,h6 {
@@ -158,8 +161,6 @@ export const createServer = (config) => {
                 <div id="root">${data.html}</div>
                 <script>window.renderedClassNames = ${JSON.stringify(data.css.renderedClassNames)};</script>
                 <script>window.INITIAL_STATE = ${JSON.stringify(initialState)};</script>
-                <script src="${ __PROD__ ? assets.vendor.js : '/vendor.js' }"></script>
-                <script async src="${ __PROD__ ? assets.main.js : '/main.js' }" ></script>
               </body>
             </html>
           `)
