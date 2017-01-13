@@ -47,36 +47,37 @@ const styles = StyleSheet.create({
     list: {
         display: 'flex',
         'flex-direction': 'row',
-        'flex-flow': 'wrap',
-        'justify-content':'space-between',
+        'flex-wrap': 'wrap',
         margin: '0',
-        listStyle: 'none',
-        width: '100%',
-        height: 'auto',
         padding: '0',
-        marginBottom: '5px',
-        marginLeft: '0',
-        marginRight: '0'
+        width: '100%',
+        'white-space':'nowrap'
     },
 
     listItem: {
         border: '10px solid #eee',
-        margin: '0 0 10px 0',
+        'box-sizing': 'border-box',
+        'vertical-align': 'top',
+        listStyle: 'none',
+        display: 'inline-block',
+        height: 'auto',
         backgroundColour:'#fff',
         padding: '10px',
-        height: 'auto',
+        margin: '0 5px 10px 5px',
+        textAlign: 'left',
+
         ':hover': {
             border: '10px solid #FF751A'
         },
 
         [screenSize.large]: {
-            width: '32.744%'
+            width: 'calc((100% / 3) - 10px)',
         },
         [screenSize.medium]: {
-            width: '49.55%'
+            width: 'calc((100% / 2) - 10px)',
         },
         [screenSize.small]: {
-            width: '100%'
+           width: '100%',
         }
     },
 

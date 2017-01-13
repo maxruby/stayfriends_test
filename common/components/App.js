@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   },
   header: {
     padding: '10px 20px 7px 20px',
-    margin: '10px 0 10px 0',
+    margin: '10px 5px 10px 5px',
     color: '#666666',
     backgroundColor: '#DDDDDD',
     textTransform: 'uppercase'

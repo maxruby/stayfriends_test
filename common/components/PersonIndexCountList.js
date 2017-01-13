@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         display: 'inline',
         padding: '5px',
         height: 'auto',
-        margin: '0 10px 5px 0',
+        margin: '0 5px 5px 5px',
         backgroundColor: '#ddd',
         textTransform: 'uppercase',
         textAlign: 'center',
@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
 
     personIndexList: {
         listStyle: 'none',
-        columnGap: 10,
         textAlign: 'justify',
         margin: '0',
         padding: '0',
