@@ -51,7 +51,7 @@ Starting with the given `index.html` file:
 
 #### Testing
 ```bash
-git clone https://github.com/jaredpalmer/react-production-starter.git stayfriends_suster_test
+git clone https://github.com/maxruby/stayfriends_test.git stayfriends_suster_test
 cd stayfriends_suster_test
 npm install
 npm start
